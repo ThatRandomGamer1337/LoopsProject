@@ -18,8 +18,8 @@ namespace LoopsProject
 
             gameOver = false;
 
-            x = 10;
-            y = 10;
+            x = 15;
+            y = 15;
 
             // - - - - - - - -
 
@@ -62,12 +62,21 @@ namespace LoopsProject
                 x = x + 1;
             }
 
+            if (x == 0)
+            {
+                x = 1;
+            }
+
+            if (y == 0)
+            {
+                y = 1;
+            }
+
             if (input.Key == ConsoleKey.Escape)
             {
                 gameOver = true;
             }
 
-            // DEBUG: Console.Write("(" + x + "), " + "(" + y + ")");
         }
 
         static void playerDraw()
